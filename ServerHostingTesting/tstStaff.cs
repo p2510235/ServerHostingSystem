@@ -11,16 +11,16 @@ namespace ServerHostingTesting
         public void InstanceOK()
         {
             //Created an instance of staff
-            clsStaff newStaff = new clsStaff();
+            clsStaff AStaff = new clsStaff();
             //this is to test that it exists
-            Assert.IsNotNull(newStaff);
+            Assert.IsNotNull(AStaff);
 
         }
 
         [TestMethod]
         public void StaffNoExists()
         {
-            clsStaff newStaff = new clsStaff();
+            clsStaff AStaff = new clsStaff();
 
         }
     }
