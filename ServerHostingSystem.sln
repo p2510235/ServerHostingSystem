@@ -8,6 +8,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ServerHostingFrontOffice", "ServerHostingFrontOffice\", "{8FF0EBFF-DF58-4204-A688-00331193FE65}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		ProjectReferences = "{20e46cb2-ea5f-448d-8b3c-8e6ab8020eb6}|ServerHostingLibrary.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_3521"
 		Debug.AspNetCompiler.PhysicalPath = "ServerHostingFrontOffice\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3521\"
@@ -23,6 +24,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ServerHostingFrontOffice", 
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "3521"
+		SlnRelativePath = "ServerHostingFrontOffice\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
