@@ -23,12 +23,13 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ServerHostingFrontOffice", 
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "3521"
+		SlnRelativePath = "ServerHostingFrontOffice\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerHostingTesting", "ServerHostingTesting\ServerHostingTesting.csproj", "{E398D4C2-1583-433E-BDED-970928B3984A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerHostingLibrary", "ServerHostingLibrary\ServerHostingLibrary.csproj", "{20E46CB2-EA5F-448D-8B3C-8E6AB8020EB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerHostingTesting", "..\ServerHostingTesting\ServerHostingTesting.csproj", "{E398D4C2-1583-433E-BDED-970928B3984A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,14 +45,14 @@ Global
 		{8FF0EBFF-DF58-4204-A688-00331193FE65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FF0EBFF-DF58-4204-A688-00331193FE65}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{8FF0EBFF-DF58-4204-A688-00331193FE65}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{E398D4C2-1583-433E-BDED-970928B3984A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E398D4C2-1583-433E-BDED-970928B3984A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E398D4C2-1583-433E-BDED-970928B3984A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E398D4C2-1583-433E-BDED-970928B3984A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{20E46CB2-EA5F-448D-8B3C-8E6AB8020EB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{20E46CB2-EA5F-448D-8B3C-8E6AB8020EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20E46CB2-EA5F-448D-8B3C-8E6AB8020EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20E46CB2-EA5F-448D-8B3C-8E6AB8020EB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E398D4C2-1583-433E-BDED-970928B3984A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E398D4C2-1583-433E-BDED-970928B3984A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E398D4C2-1583-433E-BDED-970928B3984A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E398D4C2-1583-433E-BDED-970928B3984A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
