@@ -8,18 +8,24 @@ using ServerHostingLibrary;
 
 public partial class AnCustomer : System.Web.UI.Page
 {
-    private int txtno;
+
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        clsCustomer AnCustomer = new clsCustomer();
-        AnCustomer = (clsCustomer)Session["AnCustomer"];
-        Response.Write(AnCustomer.CustomerNo);
+      //  clsCustomer AnCustomer = new clsCustomer();
+        //AnCustomer = (clsCustomer)Session["AnCustomer"];
+        //Response.Write(AnCustomer.CustomerNo);
     }
-    protected void btnok_click(object sender, EventArgs e)
+
+
+    protected void btnok_Click(object sender, EventArgs e)
     {
         clsCustomer AnCustomer = new clsCustomer();
-        AnCustomer.CustomerNo = txtno;
+        AnCustomer.Name = txtname.Text;
+        AnCustomer.PostCode = txtpost.Text;
+        AnCustomer.PPhoneNumber = txtphone.Text;
+        AnCustomer.DateAdded = txtdate.Text;
+        
         AnCustomer = (clsCustomer)Session["AnCustomer"];
         Response.Redirect("CustomerViewer.aspx");
     }

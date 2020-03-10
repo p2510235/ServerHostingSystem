@@ -81,6 +81,19 @@ namespace ServerHostingLibrary
             }
 
         }
+        private Boolean mActive;
+        public bool Active
+        {
+            get
+            {
+                return mActive;
+            }
+            set
+            {
+                mActive = value;
+            }
+
+        }
         public bool Find(int CustomerNo)
         {
             mPhoneNumber = "07946274531";
@@ -88,6 +101,7 @@ namespace ServerHostingLibrary
             mPostCode = "NG31 8RL";
             mCustomerNo = 21;
             mDateAdded = Convert.ToDateTime("16/9/2015");
+            mActive = true;
             return true;
         }
     }
