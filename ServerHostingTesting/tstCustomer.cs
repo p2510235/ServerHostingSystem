@@ -7,6 +7,10 @@ namespace Test_Framework
     [TestClass]
     public class clsCustomer
     {
+        string Name = "Sam";
+        string PhoneNumber = "07946274531";
+        string DateAdded = DateTime.Now.Date.ToString();
+        string PostCode = "Ng31 8RL";
         [TestMethod]
         public void InstanceOK()
         {
@@ -121,6 +125,34 @@ namespace Test_Framework
                 OK = false;
             }
             Assert.IsTrue(Found);
+        }
+
+        public void TestOwnServerFound()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 AddressNo = 21;
+            //invoke the method
+            Found = AnCustomer.Find(AddressNo);
+            //check the property
+            if (AnCustomer.Active != true)
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+        public void ValidMethodOK()
+        {
+            clsCustomer AnCustomer = new clsCustomer();
+            String Error = "";
+            Error = AnCustomer.Valid(CusomterNo, DateAdded, Name, PostCode, PhoneNumber);
+            Assert.AreEqual(Error, "");
         }
     }
 }

@@ -69,7 +69,7 @@ namespace ServerHostingLibrary
         }
         private string mPhoneNumber;
 
-        public string PPhoneNumber
+        public string PhoneNumber
         {
             get
             {
@@ -81,15 +81,42 @@ namespace ServerHostingLibrary
             }
 
         }
+        private Boolean mActive;
+        public bool Active
+        {
+            get
+            {
+                return mActive;
+            }
+            set
+            {
+                mActive = value;
+            }
+        }
         public bool Find(int CustomerNo)
         {
-            mPhoneNumber = "07946274531";
-            mName = "Sam";
-            mPostCode = "NG31 8RL";
-            mCustomerNo = 21;
-            mDateAdded = Convert.ToDateTime("16/9/2015");
-            return true;
+
+            clsDataConnection DB = new clsDataConnection();
+
+            DB.AddParameter("@CustomerNo", CustomerNo);
+
+            DB.Execute("sproc_tblcustomer_FilterByCustomerNo");
+
+            if (DB.Count == 1)
+            {
+                mName = Convert.ToString(DB.DataTable.Rows[0]["Name"]);
+                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+                mPhoneNumber = Convert.ToString(DB.DataTable.Rows[0]["Phonenumber"]);
+                mPostCode = Convert.ToString(DB.DataTable.Rows[0]["PostCode"]);
+                mDateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAdded"]);
+                return true;
+            }
+
+            else
+            {
+                return false;
+
+            }
         }
     }
 }
- 
