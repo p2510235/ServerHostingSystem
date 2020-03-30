@@ -20,6 +20,18 @@ namespace ServerHostingTesting
         {
             clsCustomerCollection AllCustomers = new clsCustomerCollection();
             List<clsCustomer> TestList = new List<ClsCustomer>();
+        clsCustomer TestItem = new clsCustomer();
+        TestItem.Active = true;
+        TestItem.CustomerNo = 1;
+        TestItem.Name = "Sam";
+        TestItem.DateAdded = DateTime.Now.Date;
+        TestItem.PhoneNumber = "07946274531";
+        TestItem.PostCode = "Ng31 8RL";
+
+        TestList.Add(TestItem);
+        AllCustomers.CustomerList = TestList;
+        Assert.AreEqual(AllCustomers.CustomerList, TestList);
+
         }
     }
 
