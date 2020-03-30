@@ -43,6 +43,11 @@
             <asp:TextBox ID="txtcustomer" runat="server"></asp:TextBox>
             <asp:Button ID="btn_find" runat="server" OnClick="btn_find_Click" style="margin-top: 9px" Text="Find" />
         </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <asp:Label ID="lblError" runat="server" Text="Error"></asp:Label>
+            </p>
     </form>
 </body>
 </html>

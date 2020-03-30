@@ -5,7 +5,7 @@ using System.Text;
 
 using System.Threading.Tasks;
 
-namespace ServerHostingLibrary
+ namespace ServerHostingLibrary
 {
     public class clsCustomer
     {
@@ -120,7 +120,7 @@ namespace ServerHostingLibrary
             }
         }
 
-        private static string Valid(string Name, string phoneNumber, string DateAdded, string postcode)
+        public string Valid(string Name, string phoneNumber, string DateAdded, string postcode)
         {
             String Error = "";
             DateTime DateTemp;
@@ -144,6 +144,28 @@ namespace ServerHostingLibrary
             {
                 //record the error
                 Error = Error + "The date cannot be in the future : ";
+            }
+            if (postcode.Length == 0)
+            {
+                //record the error
+                Error = Error + "The post code may not be blank : ";
+            }
+            //if the post code is too long
+            if (postcode.Length > 9)
+            {
+                //record the error
+                Error = Error + "The post code must be less than 9 characters : ";
+            }
+            if (phoneNumber.Length == 0)
+            {
+                //record the error
+                Error = Error + "The phone number may not be blank : ";
+            }
+            //if the post code is too long
+            if (phoneNumber.Length > 9)
+            {
+                //record the error
+                Error = Error + "The phone number must be less than 12 characters : ";
             }
 
             return Error;

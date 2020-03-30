@@ -470,6 +470,109 @@ namespace Test_Framework
             Assert.AreEqual(Error, "");
         }
 
+        [TestMethod]
+        public void PhoneNumberMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer anCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //this should fail
+            string PhoneNumber = "";
+            //invoke the method
+            Error = anCustomer.Valid(Name, PhoneNumber, PostCode, DateAdded);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void PhoneNumberMin()
+        {
+            //create an instance of the class we want to create
+            clsCustomer anCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string PhoneNumber = "0";
+            //invoke the method
+            Error = anCustomer.Valid(Name, PhoneNumber, PostCode, DateAdded);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhoneNumberMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer anCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string PhoneNumber = "00";
+            //invoke the method
+            Error = anCustomer.Valid(Name, PhoneNumber, PostCode, DateAdded);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhoneNumberMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer anCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string PhoneNumber = "0000000000";
+            //invoke the method
+            Error = anCustomer.Valid(Name, PhoneNumber, PostCode, DateAdded);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhoneNumberMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer anCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string PhoneNumber = "07946274531";
+            //invoke the method
+            Error = anCustomer.Valid(Name, PhoneNumber, PostCode, DateAdded);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhoneNumberMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer anCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //this should fail
+            string PhoneNumber = "000000000000";
+            //invoke the method
+            Error = anCustomer.Valid(Name, PhoneNumber, PostCode, DateAdded);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhoneNumberMid()
+        {
+            //create an instance of the class we want to create
+            clsCustomer anCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string PhoneNumber = "0000";
+            //invoke the method
+            Error = anCustomer.Valid(Name, PhoneNumber, PostCode, DateAdded);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
     }
 }
