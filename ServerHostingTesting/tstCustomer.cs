@@ -23,25 +23,27 @@ namespace Test_Framework
         }
         [TestMethod]
         public void DateAddedOK()
-        {
-            //create an instance of the class we want to create
-            clsCustomer anCustomer = new clsCustomer();
-            //create some test data to assign to the property
-            DateTime TestData = DateTime.Now.Date;
-            //assign the data to the property
-            anCustomer.DateAdded = TestData;
-            //test to see that the two values are the same
-            Assert.AreEqual(anCustomer.DateAdded, TestData);
-        }
-        public void PasswordOK()
-        {
-            //create an instance of the class we want to create
-            clsCustomer anCustomer = new clsCustomer();
-            String TestData = "Samj1046";
-            anCustomer.Password = TestData;
-            Assert.AreEqual(anCustomer.Password, TestData);
+        
+            {
+                //create an instance of the class we want to create
+                clsCustomer anCustomer = new clsCustomer();
+                //create some test data to assign to the property
+                DateTime TestData = DateTime.Now.Date;
+                //assign the data to the property
+                anCustomer.DateAdded = TestData;
+                //test to see that the two values are the same
+                Assert.AreEqual(anCustomer.DateAdded, TestData);
+            }
+            public void PasswordOK()
+            {
+                //create an instance of the class we want to create
+                clsCustomer anCustomer = new clsCustomer();
+                String TestData = "Samj1046";
+                anCustomer.Password = TestData;
+                Assert.AreEqual(anCustomer.Password, TestData);
 
-        }
+            }
+        
         [TestMethod]
         public void FindMethod()
         {
@@ -137,9 +139,9 @@ namespace Test_Framework
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 AddressNo = 21;
+            Int32 CustomerNo = 21;
             //invoke the method
-            Found = anCustomer.Find(AddressNo);
+            Found = anCustomer.Find(CustomerNo);
             //check the property
             if (anCustomer.Active != true)
             {
