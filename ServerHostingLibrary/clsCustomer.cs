@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+
 using System.Threading.Tasks;
 
 namespace ServerHostingLibrary
@@ -118,5 +119,36 @@ namespace ServerHostingLibrary
 
             }
         }
+
+        private static string Valid(string Name, string phoneNumber, string DateAdded, string postcode)
+        {
+            String Error = "";
+            DateTime DateTemp;
+            if (Name.Length == 0)
+            {
+                Error = Error + "The Name may not be blank : ";
+            }
+            
+                 if (Name.Length > 30)
+            {
+                Error = Error + "The name must be no less than 30";
+            }
+            DateTemp = Convert.ToDateTime(DateAdded);
+            if (DateTemp < DateTime.Now.Date)
+            {
+                //record the error
+                Error = Error + "The date cannot be in the past : ";
+            }
+            //check to see if the date is greater than today's date
+            if (DateTemp > DateTime.Now.Date)
+            {
+                //record the error
+                Error = Error + "The date cannot be in the future : ";
+            }
+
+            return Error;
+
+        }
+
     }
 }
