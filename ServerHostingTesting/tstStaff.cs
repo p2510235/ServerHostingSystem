@@ -1,5 +1,6 @@
 ﻿using System;
 using ServerHostingTesting;
+using ServerHOstingLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ServerHostingTesting
