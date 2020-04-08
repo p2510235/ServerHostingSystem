@@ -1,34 +1,34 @@
-﻿<%@ Page Language="VB" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AStaff.aspx.cs" Inherits="AStaff" %>
 
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta charset="utf-8" />
-    <title></title>    
-    <style type="text/css">
-        #Button1 {
-            width: 76px;
-            margin-top: 3px;
-        }
-        #Text5 {
-            margin-bottom: 0px;
-        }
-    </style>
+    <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">   
-        Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input id="txtStaffName" type="text" /><br />
-        Staff Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="txtStaffNo" type="text" /><br />
-        Role&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="txtStaffRole" type="text" /><br />
-        Start Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="txtStartDate" type="text" /><br />
-        Employment Status (Active)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="EmploymentStatus" type="checkbox" /><br />
-        Date of Birth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="txtStaffDOB" type="text" /></form>
-    <p>
-        &nbsp;</p>
-    <p>
-        <input id="btnOK" type="button" value="OK" /><input id="btnCancel" type="button" value="Cancel" /></p>
-    <p>
-        &nbsp;</p>
+    <form id="form1" runat="server">
+        <div>
+            Name<asp:TextBox ID="txtStaffName" runat="server"></asp:TextBox>
+        </div>
+        <p>
+            Date of Birth<asp:TextBox ID="txtStaffDOB" runat="server"></asp:TextBox>
+        </p>
+        <p>
+            Start Date<asp:TextBox ID="txtStaffStartDate" runat="server" Height="16px"></asp:TextBox>
+        </p>
+        <p>
+            Role<asp:TextBox ID="txtStaffRole" runat="server" style="margin-bottom: 0px"></asp:TextBox>
+        </p>
+        <p>
+            Employment Status<asp:CheckBox ID="Active" runat="server" />
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <asp:Button ID="btnOk" runat="server" Text="OK" OnClick="btnOK_Click" />
+            <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
+        </p>
+    </form>
 </body>
 </html>
