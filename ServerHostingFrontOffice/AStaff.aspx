@@ -9,6 +9,10 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            Staff Number<asp:TextBox ID="txtStaffNo" runat="server"></asp:TextBox>
+            <asp:Button ID="Find" runat="server" Text="Find" Height="21px" />
+            <br />
+            <br />
             Name<asp:TextBox ID="txtStaffName" runat="server"></asp:TextBox>
         </div>
         <p>
@@ -24,7 +28,8 @@
             Employment Status<asp:CheckBox ID="Active" runat="server" />
         </p>
         <p>
-            &nbsp;</p>
+            <asp:Label ID="lblError" runat="server" Text="lblError"></asp:Label>
+        </p>
         <p>
             <asp:Button ID="btnOk" runat="server" Text="OK" OnClick="btnOK_Click" />
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
